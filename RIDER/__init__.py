@@ -1,4 +1,4 @@
-from RIDER.core.bot import RID3R
+from RIDER.core.bot import RIDERBot
 from RIDER.core.dir import dirr
 from RIDER.core.git import git
 from RIDER.core.userbot import Userbot
