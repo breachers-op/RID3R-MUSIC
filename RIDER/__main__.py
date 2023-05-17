@@ -8,7 +8,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS
 from RIDER import LOGGER, app, userbot
-from RIDER.core.call import Vip
+from RIDER.core.call import RIDER
 from RIDER.plugins import ALL_MODULES
 from RIDER.utils.database import get_banned_users, get_gbanned
 
