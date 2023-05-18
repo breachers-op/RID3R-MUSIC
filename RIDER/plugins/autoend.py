@@ -5,7 +5,7 @@ from strings import get_command
 from RIDER import app
 from RIDER.misc import SUDOERS
 from RIDER.utils.database import autoend_off, autoend_on
-from RIDER.utils.decorators.language import language
+from RIDER.utils.decorator.language import language
 
 # Commands
 AUTOEND_COMMAND = get_command("AUTOEND_COMMAND")
