@@ -7,7 +7,7 @@ from RIDER import app
 from RIDER.utils.database import (delete_authuser, get_authuser,
                                        get_authuser_names,
                                        save_authuser)
-from RIDER.utils.decorators import AdminActual
+from RIDER.utils.decorator import AdminActual
 from RIDER.utils.formatters import int_to_alpha
 
 # Command
