@@ -3,7 +3,7 @@ from datetime import datetime
 
 import config
 from RIDER import app
-from RIDER.core.call import *, autoend
+from RIDER.core.call import * , autoend
 from RIDER.utils.database import (get_client, is_active_chat,
                                        is_autoend)
 
