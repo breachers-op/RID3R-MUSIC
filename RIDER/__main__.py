@@ -9,7 +9,7 @@ import config
 from config import BANNED_USERS
 from RIDER import LOGGER, app, userbot
 from RIDER.core.call import *
-from RIDER.plugins import ALL_MODULES
+from RIDER.plugins import *
 from RIDER.utils.database import get_banned_users, get_gbanned
 
 loop = asyncio.get_event_loop()
