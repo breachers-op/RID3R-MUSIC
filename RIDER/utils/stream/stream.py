@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup
 
 import config
 from RIDER import Carbon, YouTube, app
-from RIDER.core.call import Vip
+from RIDER.core.call import Rider
 from RIDER.misc import db
 from RIDER.utils.database import (add_active_chat,
                                        add_active_video_chat,
@@ -17,7 +17,7 @@ from RIDER.utils.inline.play import (stream_markup, queue_markup,
 
                                           telegram_markup)
 from RIDER.utils.inline.playlist import close_markup
-from RIDER.utils.pastebin import Vipbin
+from RIDER.utils.pastebin import Riderbin
 from RIDER.utils.stream.queue import put_queue, put_queue_index
 from RIDER.utils.thumbnails import gen_thumb, gen_qthumb
 
@@ -123,7 +123,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await Vipbin(msg)
+            link = await Riderbin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -178,7 +178,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Vip.join_call(
+            await Rider.join_call(
                 chat_id, original_chat_id, file_path, video=status, image=thumbnail
             )
             await put_queue(
@@ -353,7 +353,7 @@ async def stream(
             n, file_path = await YouTube.video(link)
             if n == 0:
                 raise AssistantErr(_["str_3"])
-            await Vip.join_call(
+            await Rider.join_call(
                 chat_id, original_chat_id, file_path, video=status, image=thumbnail if thumbnail else None
             )
             await put_queue(
@@ -407,7 +407,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Vip.join_call(
+            await Rider.join_call(
                 chat_id,
                 original_chat_id,
                 link,
